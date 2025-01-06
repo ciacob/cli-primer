@@ -128,7 +128,7 @@ The `wrapAndRun` function will only call your provided `mainFn` if no fatal erro
 ```javascript
 const numExitVal = myMainFn (inputData, utils, monitoringFn);
 ```
-The `inputData` will contain the merged dataset CLI-primer has built out of your application's configuration file and provided command-line arguments, whichever provided. See documentation in `configTools.js` and `argTools.js` for details.
+The `inputData` will contain the merged dataset CLI-primer has built out of your application's configuration file and provided command-line arguments, whichever given. See documentation in `configTools.js` and `argTools.js` for details.
 
 The `utils` will contain the merged set of utility functions CLI-primer provides, across all of its modules. This is just for your convenience. You can still use destructuring to selectively require only the utility functions you need from `"cli-primer"`.
 
@@ -141,7 +141,7 @@ function myCoreFunction (myArg1, myArg2, monitoringFn = null) {
   const $m = monitoringFn || function () {};
 
   const foo = ++myArg1;
-  const bar = { a:myArg1, b:2myArg2 }
+  const bar = { a:myArg1, b:myArg2 }
 
   // Use the injected monitoring function to print to the console.
   $m({
