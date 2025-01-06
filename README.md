@@ -166,7 +166,7 @@ const settings = {
   useHelp: true,
   argsDictionary: [
     { name: 'Dry Run', payload: '--isDryRun', doc: 'Prevents actual changes. For debug.' },
-    { name: 'Source File', payload: /^--(source|src)=(.+)/, doc: 'File to read from.' },
+    { name: 'Source File', payload: /^--(source|src)=(.+)/, doc: 'File to read from.', mandatory: true },
     {
       name: 'Parse Model',
       payload: /^--(parseModel)=(saasFile|raw)/,
